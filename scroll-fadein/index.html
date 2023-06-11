@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Intersection Observer Demo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>scroll-animate / scroll-fadein</h2>
+      <p>
+        Intersection Observer
+        APIを使って、スクロールに合わせて要素をフェードインさせるサンプルです。
+        .scroll-animate と .scroll-fadein__{direction}
+        を付与するだけで、スクロールに合わせて要素がフェードインします。
+      </p>
+      <p>source:</p>
+      <ul>
+        <li><a href="style.css" target="_blank">style.css</a></li>
+        <li><a href="script.js" target="_blank">script.js</a></li>
+      </ul>
+
+      <div>
+        <p>下から上へ</p>
+        <div class="scroll-animate scroll-fadein__up">scroll-fadein__up</div>
+      </div>
+
+      <div>
+        <p>上から下へ</p>
+        <div class="scroll-animate scroll-fadein__down">
+          scroll-fadein__down
+        </div>
+      </div>
+
+      <div>
+        <p>右から左へ</p>
+        <div class="scroll-animate scroll-fadein__left">
+          scroll-fadein__left
+        </div>
+      </div>
+
+      <div>
+        <p>左から右へ</p>
+        <div class="scroll-animate scroll-fadein__right">
+          scroll-fadein__right
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

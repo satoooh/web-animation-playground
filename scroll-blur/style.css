@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: -1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  > div {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    > div.scroll-animate {
+      background-color: #d2e3fc;
+      padding: 2rem;
+      border-radius: 0.125em;
+    }
+    > span.scroll-animate {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ff5678;
+    }
+  }
+}
+
+/* 以下アニメーション用スタイル */
+
+.scroll-animate {
+  opacity: 0;
+  &.animated {
+    opacity: 1;
+    transition: all 0.4s 0.2s ease;
+  }
+}
+
+.scroll-blur {
+  filter: blur(10px);
+  &.animated {
+    filter: blur(0);
+    transition: filter 0.5s 0.2s ease;
+  }
+}
